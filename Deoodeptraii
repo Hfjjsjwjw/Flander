@@ -1,0 +1,49 @@
+local FlanderHubInfo = {
+    Discord = "discord.gg/QgvYvTkp",
+    Title = "FlanderHub",
+    Time = nil
+}
+
+local PlayerInfo = {
+    Username = nil,
+    UserId = nil,
+    Sheckles = nil,
+    ShecklesText = nil,
+    MaxEggs = nil,
+    MaxPets = nil
+}
+
+local GameInfo = {
+    Weather = nil,
+    TotalPlants = nil,
+    Objects = {
+        nil
+    },
+    EggsHatching = {
+        nil
+    }
+}
+
+local function printFalderHubUI()
+    print("==== FlanderHub ====")
+    print("Discord:" FlanderHub.Discord)
+    print("Title:", FlanderInfo.Title)
+    print("Time:", FlanderInfo.Time)
+    print("")
+
+    print("== Player Information ==")
+    print("Username:", PlayerInfo.Username)
+    print("UserId:", PlayerInfo.UserId)
+    print("Sheckles:", tostring(PlayerInfo.Sheckles))
+    print("Max Eggs:", tostring(PlayerInfo.MaxEggs))
+    print("Max Pets:", tostring(PlayerInfo.MaxPets))
+    print("")
+
+    print("== Game Information ==")
+    print("Weather:", GameInfo.Weather)
+    print("Total Plants:", tostring(GameInfo.TotalPlants))
+    print("Objects: [" .. table.concat(GameInfo.Objects, ", ") .. "]")
+    print("Eggs Hatching: [" .. table.concat(GameInfo.EggsHatching, " | ") .. "]")
+end
+
+printSeaHubUI()
